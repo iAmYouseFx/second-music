@@ -43,6 +43,11 @@ bot.on("ready", async () => {
 	}*/
 
 });
+bot.on('message', message => {
+if(message.content.startsWith(prefix + 'come')) {
+      hero.channels.get('478035836902834186').join();
+}
+});
 bot.on('message', function(message) {
 	const myID = "452191687159185409";
     let args = message.content.split(" ").slice(1).join(" ");
